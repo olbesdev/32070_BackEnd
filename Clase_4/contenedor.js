@@ -3,7 +3,7 @@ class Producto {
     constructor(ruta){
         this.ruta = ruta
     }
-
+//Guardar Producto desde un objeto ✔ 
     async save(objeto){
         try{
             let dataArch = await fs.promises.readFile(this.ruta, 'utf-8') //Lee el archivo de la ruta especificada en formato texto
@@ -22,8 +22,22 @@ class Producto {
         }
     
     }
-
-    //async getById(objeto.id)
+//Traer producto por el ID
+    async getById(id){
+        try {
+            let dataArch = await fs.promises.readFile(this.ruta, 'utf-8')
+            let dataArchParse = JSON.parse(dataArch)
+            let producto = dataArchParse.find(producto => producto.id === id)
+            if (producto) {
+                //return producto //Devuelve el producto con el ID solicitado
+                console.log(producto)
+            } else {
+                console.log(`El producto con el ID: ${id} no existe`)
+            }
+        } catch (error) {
+            console.log(error)
+        }
+    }
         
 }
 
