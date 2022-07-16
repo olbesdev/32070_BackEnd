@@ -1,5 +1,5 @@
-const Contenedor = require ('./contenedor')
+const Producto = require ('./contenedor')
 
-const contenedor = new Contenedor('./productos.txt')
+const producto = new Producto('./productos.txt')
 
-contenedor.save({nombre: 'Pan sin Gluten', precio: 12000, categoria: 'Sin Glutten', descripcion: 'Pan sin glutten'})
+producto.save({nombre: 'Pan sin Gluten Grande', precio: 12000, categoria: 'Sin Glutten', descripcion: 'Pan sin glutten'})
