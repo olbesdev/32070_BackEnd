@@ -8,4 +8,7 @@ const producto = new Producto('./productos.txt')
 
 //Buscar producto por ID
 //producto.getById(2)
+//producto.getAll()
+
+
 

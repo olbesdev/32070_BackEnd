@@ -38,6 +38,22 @@ class Producto {
             console.log(error)
         }
     }
+//Función Mostrar todos los productos
+        async getAll(){
+            try {
+                let dataArch = await fs.promises.readFile(this.ruta, 'utf-8') //Lee el archivo txt
+                let dataArchParse = JSON.parse(dataArch) //Pasa a formato JavaScript / JSON
+                if (dataArchParse.length) { //Comprueba si no existe registros/productos en el archivo txt
+                    //return dataArchParse
+                    console.log(dataArchParse) //Muestra por consola los productos
+                } else {
+                    console.log('No hay productos registrados') //Si no existe datos en dataArchParse.lenght informa que no hay productos
+                }
+            }catch (error){
+                console.log(error)
+            }
+        }
+
         
 }
 
