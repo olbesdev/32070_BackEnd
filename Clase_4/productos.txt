@@ -1,6 +1,6 @@
 [
-  {
-    "nombre": "Pan sin Gluten Grande",
+    {
+    "nombre": "Pan sin Gluten Grande 2",
     "precio": 12000,
     "categoria": "Sin Glutten",
     "descripcion": "Pan sin glutten",
@@ -47,5 +47,12 @@
     "categoria": "Sin Glutten",
     "descripcion": "Pan sin glutten",
     "id": 7
+  },
+  {
+    "nombre": "Aceite de Coco",
+    "precio": 42000,
+    "categoria": "Orgánico",
+    "descripcion": "Aceite de coco organico, libre de conservantes",
+    "id": 8
   }
 ]

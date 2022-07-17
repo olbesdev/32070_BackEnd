@@ -2,13 +2,17 @@ const Producto = require ('./contenedor')
 
 const producto = new Producto('./productos.txt')
 
-//Agregar / Guardar Productos
-//producto.save({nombre: 'Pan sin Gluten Grande', precio: 12000, categoria: 'Sin Glutten', descripcion: 'Pan sin glutten'})
+//Llamado a la función "Agregar / Guardar Productos"
+//producto.save({nombre: 'Aceite de Coco', precio: 42000, categoria: 'Orgánico', descripcion: 'Aceite de coco organico, libre de conservantes'})
 
-
-//Buscar producto por ID
+//Llamado a la función "Mostrar producto por ID"
 //producto.getById(2)
+
+//Llamado a la función "Mostrar todos los productos"
 //producto.getAll()
 
+//Llamado a la función "Borrar producto por ID - deleteById"
+//producto.deleteById(1)
 
-
+//Llamado a la función "Borrar todos los productos"
+//producto.deleteAll()

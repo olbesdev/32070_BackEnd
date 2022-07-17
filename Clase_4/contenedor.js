@@ -3,7 +3,7 @@ class Producto {
     constructor(ruta){
         this.ruta = ruta
     }
-//Guardar Producto desde un objeto ✔ 
+//Agregar producto a un array ✅ 
     async save(objeto){
         try{
             let dataArch = await fs.promises.readFile(this.ruta, 'utf-8') //Lee el archivo de la ruta especificada en formato texto
@@ -22,11 +22,11 @@ class Producto {
         }
     
     }
-//Traer producto por el ID
+//Mostrar producto por el ID
     async getById(id){
         try {
-            let dataArch = await fs.promises.readFile(this.ruta, 'utf-8')
-            let dataArchParse = JSON.parse(dataArch)
+            let dataArch = await fs.promises.readFile(this.ruta, 'utf-8') //Lee el archivo txt
+            let dataArchParse = JSON.parse(dataArch) //Paasa a formato JavaScript / JSON
             let producto = dataArchParse.find(producto => producto.id === id)
             if (producto) {
                 //return producto //Devuelve el producto con el ID solicitado
@@ -38,7 +38,7 @@ class Producto {
             console.log(error)
         }
     }
-//Función Mostrar todos los productos
+//Mostrar todos los productos ✅ 
         async getAll(){
             try {
                 let dataArch = await fs.promises.readFile(this.ruta, 'utf-8') //Lee el archivo txt
@@ -53,8 +53,28 @@ class Producto {
                 console.log(error)
             }
         }
+//Eliminar Producto por ID ✅ 
+        async deleteById(id){
+            try {
+                let dataArch = await fs.promises.readFile(this.ruta, 'utf-8')
+                let dataArchParse = JSON.parse(dataArch)
+                let producto = dataArchParse.find(producto => producto.id === id)
+                    if (producto) {
+                    let dataArchParseFilter = dataArchParse.filter(producto => producto.id !== id)
+                    await fs.promises.writeFile(this.ruta, JSON.stringify(dataArchParseFilter, null, 2))
+                        console.log(`El producto con el ID: "${id}" ha sido eliminado`) 
+                    } else {
+                        console.log(`No se ha encontrado el producto con el ID: ${id}`)
+                    }
+            } catch (error) {
+                console.log(error)
+            }
+        }
+//Borrar todos los productos ✅  
+        async deleteAll(){
+            await fs.promises.writeFile(this.ruta, JSON.stringify([], null, 2), 'utf-8')
+        }
 
-        
 }
 
 module.exports = Producto
