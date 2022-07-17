@@ -22,7 +22,7 @@ class Producto {
         }
     
     }
-//Mostrar producto por el ID
+//Mostrar producto por el ID ✅ 
     async getById(id){
         try {
             let dataArch = await fs.promises.readFile(this.ruta, 'utf-8') //Lee el archivo txt
