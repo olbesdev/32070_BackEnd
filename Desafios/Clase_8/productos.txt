@@ -1,58 +1,44 @@
 [
     {
-    "nombre": "Pan sin Gluten Grande 2",
-    "precio": 12000,
-    "categoria": "Sin Glutten",
-    "descripcion": "Pan sin glutten",
+    "nombre": "Producto 1",
+    "precio": 11000,
+    "categoria": "Categoria",
+    "descripcion": "Descripción Producto 1",
     "id": 1
   },
   {
-    "nombre": "Pan sin Gluten Grande 2",
+    "nombre": "Producto 2",
     "precio": 12000,
-    "categoria": "Sin Glutten",
-    "descripcion": "Pan sin glutten",
+    "categoria": "Categoria",
+    "descripcion": "Descripción Producto 2",
     "id": 2
   },
   {
-    "nombre": "Pan sin Gluten Grande 3",
-    "precio": 12000,
-    "categoria": "Sin Glutten",
-    "descripcion": "Pan sin glutten",
+    "nombre": "Producto 3",
+    "precio": 13000,
+    "categoria": "Categoria 2",
+    "descripcion": "Descripción Producto 3",
     "id": 3
   },
   {
-    "nombre": "Pan sin Gluten Grande 4",
-    "precio": 12000,
-    "categoria": "Sin Glutten",
-    "descripcion": "Pan sin glutten",
+    "nombre": "Producto 4",
+    "precio": 14000,
+    "categoria": "Categoria 2",
+    "descripcion": "Descripción Producto 4",
     "id": 4
   },
   {
-    "nombre": "Pan sin Gluten Grande 5",
-    "precio": 12000,
-    "categoria": "Sin Glutten",
-    "descripcion": "Pan sin glutten",
+    "nombre": "Producto 5",
+    "precio": 15000,
+    "categoria": "Categoria 3",
+    "descripcion": "Descripción Producto 5",
     "id": 5
   },
   {
-    "nombre": "Pan sin Gluten Grande",
-    "precio": 12000,
-    "categoria": "Sin Glutten",
-    "descripcion": "Pan sin glutten",
+    "nombre": "Producto 6",
+    "precio": 16000,
+    "categoria": "Categoria 3",
+    "descripcion": "Descripción Producto 6",
     "id": 6
-  },
-  {
-    "nombre": "Pan sin Gluten Grande",
-    "precio": 12000,
-    "categoria": "Sin Glutten",
-    "descripcion": "Pan sin glutten",
-    "id": 7
-  },
-  {
-    "nombre": "Aceite de Coco",
-    "precio": 42000,
-    "categoria": "Orgánico",
-    "descripcion": "Aceite de coco organico, libre de conservantes",
-    "id": 8
   }
 ]
