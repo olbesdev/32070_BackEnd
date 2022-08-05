@@ -66,7 +66,8 @@ class Producto {
                         return(`El producto con el ID: "${id}" ha sido eliminado`)
                         //console.log(`El producto con el ID: "${id}" ha sido eliminado`) 
                     } else {
-                        console.log(`No se ha encontrado el producto con el ID: ${id}`)
+                        return(`No se ha encontrado el producto con el ID: ${id}`)
+                        //console.log(`No se ha encontrado el producto con el ID: ${id}`)
                     }
             } catch (error) {
                 console.log(error)
@@ -76,7 +77,7 @@ class Producto {
         async deleteAll(){
             await fs.promises.writeFile(this.ruta, JSON.stringify([], null, 2), 'utf-8')
         }
-//Seleccionar Item aleatoriamente
+//Seleccionar Item aleatoriamente ✅
         async randomItem(){
             try {
                 let dataArch = await fs.promises.readFile(this.ruta, 'utf-8') //Lee el archivo de la ruta especificada en formato texto
@@ -85,10 +86,30 @@ class Producto {
                 return(randomItem)
                 //console.log(randomItem)
             } catch (error) {
+                return(`Ups! hay un error: ${error}`)
+            }
+        }
+
+        async updateById(objeto){ 
+            try {
+                let dataArch = await fs.promises.readFile(this.ruta, 'utf-8')
+                let dataArchParse = JSON.parse(dataArch)
+                return dataArchParse
+                const objetoIndex = dataArchParse.findIndex(producto => producto.id === objeto.id)
+
+                if (objetoIndex !== -1) {
+                    dataArchParse[objetoIndex] = objeto
+                    await fs.promises.writeFile(this.ruta, JSON.stringify(dataArchParse, null, 2))
+                    return{Mensaje: "El producto ha sido actualizado"}
+                    //console.log(first)
+                }else{
+                    return(`Ups! hay un error: ${error}`)
+                }
+            } catch (error) {
                 console.log(error)
             }
         }
 
 }
 
-module.exports = Producto
+module.exports = { Producto }
