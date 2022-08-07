@@ -1,5 +1,5 @@
 [
-    {
+  {
     "nombre": "Producto 1",
     "precio": 11000,
     "categoria": "Categoria",
@@ -28,11 +28,11 @@
     "id": 4
   },
   {
-    "nombre": "Producto 5",
-    "precio": 15000,
-    "categoria": "Categoria 3",
-    "descripcion": "Descripción Producto 5",
-    "id": 5
+    "id": 5,
+    "nombre": "Producto 5 Modificado",
+    "precio": 130000,
+    "categoria": "Categoria 4",
+    "descripcion": "Descripción Producto 5 Modificado"
   },
   {
     "nombre": "Producto 6",
@@ -40,5 +40,12 @@
     "categoria": "Categoria 3",
     "descripcion": "Descripción Producto 6",
     "id": 6
+  },
+  {
+    "id": 7,
+    "nombre": "Producto 7 Modificado parte 2",
+    "precio": 1300000,
+    "categoria": "Categoria 77",
+    "descripcion": "Descripción Producto 7 Modificado"
   }
 ]
