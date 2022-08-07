@@ -44,6 +44,19 @@ routerProductos.post('/', async (req, res) => {
 
 })
 
+routerProductos.get('/:id', async (req, res)=>{
+    try {
+        const{id} = req.params
+        const objetoProducto = await producto.getById(parseInt(id))
+
+        res.send({
+            mensaje: objetoProducto
+        })
+    } catch (error) {
+        console.log(error)
+    }
+})
+
 
 routerProductos.put('/:id', async (req, res) => {
     try {

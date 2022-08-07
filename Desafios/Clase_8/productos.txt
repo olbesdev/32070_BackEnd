@@ -47,5 +47,19 @@
     "precio": 1300000,
     "categoria": "Categoria 77",
     "descripcion": "Descripción Producto 7 Modificado"
+  },
+  {
+    "nombre": "bandeja",
+    "precio": "550000",
+    "categoria": "Categoria 5",
+    "descripcion": "Bandeja",
+    "id": 8
+  },
+  {
+    "nombre": "Producto 9",
+    "precio": "100",
+    "categoria": "Categoria 1",
+    "descripcion": "Descripcion producto 1",
+    "id": 9
   }
 ]
