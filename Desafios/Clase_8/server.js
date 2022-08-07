@@ -43,7 +43,6 @@ routerProductos.post('/', async (req, res) => {
     }
 
 })
-//routerProductos.get('/',)
 
 
 routerProductos.put('/:id', async (req, res) => {
