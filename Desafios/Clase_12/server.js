@@ -1,12 +1,7 @@
 const express = require("express");
 const handlebars = require("express-handlebars");
-const { Contenedor } = require("./contenedor");
-const { Server: HttpServer } = require('http')
-const { Server: IOServer } = require('socket.io')
-
 const app = express();
-const httpServer = new HttpServer(app)
-const io = new IOServer(httpServer)
+const { Contenedor } = require("./contenedor");
 
 app.use(express.urlencoded({ extended: true }));
 const port = process.env.PORT || 8080;
@@ -55,6 +50,6 @@ app.post("/productos", async (req, res) => {
 });
 
 app.listen(port, err => {
-	if (err) throw new Error(`Error initializing server: ${err}`);
-	console.log(`Server initialized, listening on port: ${port}`);
+	if (err) throw new Error(`Error al iniciar el servidor: ${err}`);
+	console.log(`Server is running on port ${port}`);
 });
