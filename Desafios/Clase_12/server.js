@@ -18,6 +18,9 @@ const comentarios = new Contenedor("./mensajes.json");
 io.on("connection", async socket => {
 	let mensajesChat = await comentarios.getAll();
 	console.log("Se contectó un usuario");
+	socket.on('disconnect', () => {
+		console.log('Se ha desconectado un usuario');
+	  });
 
 	const mensaje = {
 		mensaje: "ok",
