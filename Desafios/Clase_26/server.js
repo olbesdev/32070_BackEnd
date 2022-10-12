@@ -1,6 +1,7 @@
 const express = require('express')
 const jwt = require('jsonwebtoken')
 
+
 const PRIVATE_KEY = 'mysecret'
 
 const app = express()
