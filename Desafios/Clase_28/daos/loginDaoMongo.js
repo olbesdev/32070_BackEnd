@@ -10,7 +10,7 @@ mongo.connect();
 
 class LoginDaoMongo extends contenedorLogin {
   constructor() {
-    super("clase-26-zentregable", "usuarios");
+    super("ecommerce", "usuarios");
   }
 
   /**

@@ -2,7 +2,7 @@ const contenedorChatMongo = require("../clases/contenedorChatMongo.js");
 const { MongoClient } = require("mongodb");
 
 const mongo = new MongoClient(
-    "mongodb+srv://emilio:emilio1@cluster0.efltjcq.mongodb.net/?retryWrites=true&w=majority"
+    "mongodb+srv://olbesdev:53Jop57Ail@cluster0.6zxsnby.mongodb.net/?retryWrites=true&w=majority"
 );
 mongo.connect();
 

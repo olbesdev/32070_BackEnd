@@ -3,3 +3,4 @@ module.exports = class ContenedorFirebase {
       this.nombreCollection = nombreCollection;
     }
   };
+  
