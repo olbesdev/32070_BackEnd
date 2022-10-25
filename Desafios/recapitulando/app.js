@@ -12,7 +12,7 @@ const app = express();
 /* -------------------------------------------------------------------------- */
 
 app.get("/", (req, res) => {
-  res.send("<h1>Hello World</h1>");
+  res.send("<h1>A ver si funciona esta joda</h1>");
   //res.send({hello: "world"}) JSON Format
 });
 
