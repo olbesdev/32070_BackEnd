@@ -1,10 +1,5 @@
-const fs = require('fs')
-const express = require('express')
-
-
-
-
-
+const fs = require("fs");
+const express = require("express");
 
 /* -------------------------------------------------------------------------- */
 /*                                   EXPRESS                                  */
@@ -16,16 +11,16 @@ const app = express();
 /*                                   ROUTES                                   */
 /* -------------------------------------------------------------------------- */
 
-app.get('/', (req, res) => {
-    res.send({hello: "world"})
-})
+app.get("/", (req, res) => {
+  res.send("<h1>Hello World</h1>");
+  //res.send({hello: "world"}) JSON Format
+});
 
 /* -------------------------------------------------------------------------- */
 /*                             SERVER_DECLARATION                             */
 /* -------------------------------------------------------------------------- */
 
-//! const PORT = process.env.PORT 
-const server = app.listen(4000, () => {
-    console.log(`Server Running on http://localhost:${server.address().port}`)
-
-}) 
+const PORT = process.env.PORT
+const server = app.listen(PORT, () => {
+  console.log(`Server Running`);
+});
