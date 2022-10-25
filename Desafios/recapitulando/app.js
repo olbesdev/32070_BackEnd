@@ -17,7 +17,8 @@ const app = express();
 /* -------------------------------------------------------------------------- */
 
 app.get('/', (req, res) => {
-    res.send({hello: "world"})
+    res.send("Hello World")
+    //res.send({hello: "world"}) podemos traer un objeto JSON
 })
 
 /* -------------------------------------------------------------------------- */
