@@ -9,7 +9,7 @@ const CarritoDAOArchivo = require('../daos/carritos/CarritoDAOArchivo');
 
 const getStorage = () => {
     //const storage = process.env.STORAGE;
-    const storage = 'firebase'; //Prueba: forzar variable para trabajar con la DB deseada.
+    const storage = 'MongoDB'; //Prueba: forzar variable para trabajar con la DB deseada.
 
     switch (storage) {
         case 'firebase':
@@ -20,8 +20,8 @@ const getStorage = () => {
             break
         case 'MongoDB':
             return {
-                productos: new ProductosDAOFirebase(),
-                carrito: new CarritoDAOFirebase()
+                productos: new ProductosDAOMongoDB(),
+                carrito: new CarritoDAOMongoDB()
             }
             break
             case 'archivo':
